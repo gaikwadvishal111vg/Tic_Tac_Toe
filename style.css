@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#pageloader{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.692) url(./loading_ps.gif) no-repeat center;
+    background-size:cover;
+    position: fixed;
+    z-index: 100;
+}
+.refersh{
+    display: none;
+}
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+  }
+  
+  .title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+  }
+  
+  .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  }
+  
+  .title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 4.5vw;
+    text-transform: uppercase;
+  }
+
+.message{
+    font-size:30px;
+}
+
+
+
+body {
+   background-image: url("https://w0.peakpx.com/wallpaper/202/466/HD-wallpaper-tic-tac-toe-game-s-logo.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+    text-align: center;
+    color: white;
+}
+.container{
+    height: 70vh;
+    /* border: 1px solid red; */
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* margin: 0 auto; */
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    font-size: 60px;
+    background-color: rgba(62, 62, 61, 0.515);
+    border: 1px solid green;
+    border: 0;
+    outline: 0;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0  5px rgba(80, 12, 122, 0.5);
+}
+.box:nth-child(even):hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.10s;
+    background-color: green; 
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
+  .box:nth-child(odd):hover {
+    background-color: red; 
+    animation: shake 0.10s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+#new_btn{
+    width: 150px;
+    height: 40px;
+    font-size: 25px ;
+    font-weight: bold;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+   
+    background-image: linear-gradient( 111.4deg,  rgba(238,113,113,1) 1%, rgba(246,215,148,1) 58% );
+}
+#msg{
+  font-size: 25px;
+}
